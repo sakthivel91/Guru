@@ -22,6 +22,9 @@ public class PageObjMod extends BaseClass {
 
     @FindBy(xpath ="//button[@name='login']")
     public WebElement loginBtn;
+    
+    @FindBy(xpath ="//button[@name='logi']")
+    public WebElement loginBtnn;
 
    
 
@@ -36,4 +39,9 @@ public class PageObjMod extends BaseClass {
     public void login() {
         accessClick(loginBtn);
     }
+    
+    public void loginbt() {
+        accessClick(loginBtnn);
+    }
+    
 }

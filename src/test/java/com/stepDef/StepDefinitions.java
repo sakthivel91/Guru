@@ -37,5 +37,10 @@ public class StepDefinitions {
        
         pg.login();
     }
+    
+    @Then("user click the login button on the homepage")
+    public void user_click_the_login_button_on_the_homepage() {
+       pg.loginbt();
+    }
 }
 
