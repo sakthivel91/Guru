@@ -1,7 +1,5 @@
 package com.runnerClass;
 
-import org.testng.annotations.Test;
-
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
@@ -9,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 			
 			features = "src/test/resources/Feature",
 			glue = { "com.stepDef","com.hooks"},
-			//tags="@tag2",
+			tags= "@sanity or ~@smoke",
 			plugin= {"pretty", "json:target/cucumber.json"},
 			monochrome = true, 
 			publish = true,
