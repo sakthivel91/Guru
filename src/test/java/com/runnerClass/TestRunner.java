@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 			
 			features = "src/test/resources/Feature",
 			glue = { "com.stepDef","com.hooks"},
-			tags= "@sanity or @smoke",
+			tags= "@sanity and @smoke",
 			plugin= {"pretty", "json:target/cucumber.json"},
 			monochrome = true, 
 			publish = true,
