@@ -37,7 +37,7 @@ public class PageObjMod extends BaseClass {
     }
 
     public void login() {
-        accessClick(loginBtnn);
+        accessClick(loginBtn);
     }
    
     
