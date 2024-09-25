@@ -1,5 +1,9 @@
 package com.runnerClass;
 
+import org.testng.annotations.AfterClass;
+
+
+
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
@@ -7,8 +11,8 @@ import io.cucumber.testng.CucumberOptions;
 			
 			features = "src/test/resources/Feature",
 			glue = { "com.stepDef","com.hooks"},
-			tags= "@sanity or @smoke",
-			plugin= {"pretty", "json:target/cucumber.json"},
+			tags= "@smoke",
+			plugin = {"pretty","json:target/cucumber.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 			monochrome = true, 
 			publish = true,
 			dryRun = false
@@ -16,8 +20,5 @@ import io.cucumber.testng.CucumberOptions;
 
 
 	public class TestRunner extends AbstractTestNGCucumberTests {
-		
-		
-		
-		
+	
 }

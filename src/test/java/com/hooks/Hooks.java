@@ -1,16 +1,10 @@
 package com.hooks;
 
-import java.io.File;
-
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 
-import com.base.BaseClass;
 import com.pages.PageObjMod;
 
 import io.cucumber.java.After;
@@ -23,13 +17,14 @@ public class Hooks {
 
     @Before
     public void setUp() {
+    	//ExtendReport.getExtent();
         driver = new ChromeDriver();
         driver.get("https://www.facebook.com/");
         pg = new PageObjMod(driver);
     }
    
   
-    @After()
+    @After
     public void takeScraenshotOnFailure(Scenario scenario) {
 
     if (scenario.isFailed()) {
@@ -46,6 +41,7 @@ public class Hooks {
     public void tearDown() {
         if (driver != null) {
             driver.quit();
+            //ExtendReport.flush();
         }
     }
     

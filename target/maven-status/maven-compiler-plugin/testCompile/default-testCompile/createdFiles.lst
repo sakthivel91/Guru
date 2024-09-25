@@ -1,5 +1,0 @@
-com\base\BaseClass.class
-com\stepDef\StepDefinitions.class
-com\pages\PageObjMod.class
-com\runnerClass\TestRunner.class
-com\hooks\Hooks.class

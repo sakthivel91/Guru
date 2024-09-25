@@ -14,7 +14,7 @@ public class PageObjMod extends BaseClass {
 	        PageFactory.initElements(driver, this);
 	    }
 	 
-    @FindBy(id = "email")
+    @FindBy(css = "#email")
     public WebElement username;
 
     @FindBy(id = "pass")
@@ -37,7 +37,7 @@ public class PageObjMod extends BaseClass {
     }
 
     public void login() {
-        accessClick(loginBtn);
+        accessClick(loginBtnn);
     }
    
     

@@ -1,6 +1,6 @@
-@sanity
-Feature: Verify home screen
 
+Feature: Verify home screen
+@sanity
   Scenario Outline: Verification of Loginpage with valid username credentials
     Given App is launched
     When user enter the username on the App option "<username>" "<password>"
