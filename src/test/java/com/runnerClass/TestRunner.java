@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 			
 			features = "src/test/resources/Feature",
 			glue = { "com.stepDef","com.hooks"},
-			tags= "@smoke",
+			tags= "@smoke or @sanity",
 			plugin = {"pretty","json:target/cucumber.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 			monochrome = true, 
 			publish = true,
