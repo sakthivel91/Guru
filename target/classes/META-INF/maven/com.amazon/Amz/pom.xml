@@ -5,13 +5,7 @@
 	<groupId>com.amazon</groupId>
 	<artifactId>Amz</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<properties>
-
-
-		<maven.compiler.source>22</maven.compiler.source>
-		<maven.compiler.target>22</maven.compiler.target>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+	
 	<dependencies>
 		<!-- Selenium Java -->
 		<dependency>
@@ -56,6 +50,12 @@
 			<version>7.7.0</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.12</version> <!-- Replace with the latest version -->
+    <scope>provided</scope>
+</dependency>
 
 		<!-- Commons IO -->
 		<dependency>
@@ -84,6 +84,15 @@
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
+			<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.13.0</version> <!-- Latest stable version -->
+            <configuration>
+                <source>21</source> <!-- Or your desired version -->
+                <target>21</target>
+            </configuration>
+        </plugin>
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
